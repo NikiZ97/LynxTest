@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_football"
+        android:title="@string/title_football"
+        android:icon="@drawable/navigation_football"/>
+
+    <item
+        android:id="@+id/navigation_hockey"
+        android:title="@string/title_hockey"
+        android:icon="@drawable/navigation_hockey"/>
+
+    <item
+        android:id="@+id/navigation_tennis"
+        android:title="@string/title_tennis"
+        android:icon="@drawable/navigation_tennis"/>
+
+    <item
+        android:id="@+id/navigation_basketball"
+        android:title="@string/title_basketball"
+        android:icon="@drawable/navigation_basketball"/>
+
+    <item
+        android:id="@+id/navigation_volleyball"
+        android:title="@string/title_volleyball"
+        android:icon="@drawable/navigation_volleyball"/>
+</menu>

@@ -3,7 +3,9 @@
 
     <!-- Titles-->
     <string name="title_football">Football</string>
-    <string name="title_gifts">Gifts</string>
-    <string name="title_cart">Cart</string>
-    <string name="title_profile">Profile</string>
+    <string name="title_hockey">Hockey</string>
+    <string name="title_tennis">Tennis</string>
+    <string name="title_basketball">Basketball</string>
+    <string name="title_volleyball">Volleyball</string>
+    <string name="title_cybersport">Cybersport</string>
 </resources>
