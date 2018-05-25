@@ -1,5 +1,8 @@
 package com.sharonov.nikiz.lynxtestapp.ui.activity;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,6 +11,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.sharonov.nikiz.lynxtestapp.R;
 import com.sharonov.nikiz.lynxtestapp.ui.fragment.NewsFragment;
@@ -21,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, R.string.check_internet_connection, Toast.LENGTH_LONG).show();
+            return;
+        }
+
         toolbar = getSupportActionBar();
         BottomNavigationView navigationView = findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
@@ -33,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment fragment;
                     switch (item.getItemId()) {
                         case R.id.navigation_football:
                             toolbar.setTitle(R.string.title_football);
@@ -62,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadFragmentWithCategory(String category) {
         Fragment fragment;
-        fragment = NewsFragment.newInstance("item", category);
+        fragment = NewsFragment.newInstance(category);
         loadFragment(fragment);
     }
 
@@ -73,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
+    private boolean isNetworkAvailable() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = cm.getActiveNetworkInfo();
+        return networkInfo != null && networkInfo.isConnectedOrConnecting();
     }
 }

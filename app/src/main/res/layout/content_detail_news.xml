@@ -5,11 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/detail_news_background_color"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="com.sharonov.nikiz.lynxtestapp.ui.activity.DetailNewsActivity"
         tools:showIn="@layout/activity_detail_news">
@@ -33,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:text="@string/hyphen"
                 android:textColor="@color/textColor"
                 android:textSize="20sp" />
 
@@ -60,8 +60,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
-                android:textSize="19sp"
-                tools:text="КУБОК ИСПАНИИ" />
+                android:textColor="@color/transparent_black"
+                android:textSize="19sp" />
 
             <TextView
                 android:id="@+id/place"
@@ -69,8 +69,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
-                android:textSize="19sp"
-                tools:text="КАМП НОУ" />
+                android:textColor="@color/transparent_black"
+                android:textSize="19sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -87,30 +87,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
-                android:textSize="19sp"
-                tools:text="РЕАЛ МАДРИД" />
+                android:textSize="19sp"/>
 
             <TextView
                 android:id="@+id/first_team_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                tools:text="Реал че-то сдулся в последнее время, ничего не могут, у Роналду радикулит" />
-
+                android:textSize="18sp" />
             <TextView
                 android:id="@+id/second_team_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
-                android:textSize="19sp"
-                tools:text="БАРСЕЛОНА" />
+                android:textSize="19sp" />
 
             <TextView
                 android:id="@+id/second_team_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                tools:text="Барса ваще топ, всех мочит как щенков. Молитесь. Месси -- Бог" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -126,15 +121,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="19sp"
-                android:textColor="@color/textColor"
-                tools:text="Барса победит"/>
+                android:textColor="@color/textColor"/>
 
             <TextView
                 android:id="@+id/prediction_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                tools:text="1 1.30 x 6.30 2 over9000"/>
+                android:textSize="18sp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -147,8 +140,7 @@
                 android:id="@+id/prediction_coefficients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                tools:text="Барса победит"/>
+                android:textSize="18sp"/>
         </LinearLayout>
 
     </RelativeLayout>

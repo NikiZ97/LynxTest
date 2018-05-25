@@ -22,7 +22,8 @@
     <string name="retrofit_basketball">basketball</string>
     <string name="retrofit_volleyball">volleyball</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_detail_news">Подробности</string>
     <string name="prediction_title">Прогноз</string>
+    <string name="check_internet_connection">Нет подключения к интернету</string>
+    <string name="hyphen">-</string>
 </resources>

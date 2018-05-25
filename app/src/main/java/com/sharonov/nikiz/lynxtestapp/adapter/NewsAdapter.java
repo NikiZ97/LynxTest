@@ -14,11 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
-    private Context context;
     private ArrayList<NewsItem> items;
 
-    public NewsAdapter(Context context, ArrayList<NewsItem> items) {
-        this.context = context;
+    public NewsAdapter(ArrayList<NewsItem> items) {
         this.items = items;
     }
 

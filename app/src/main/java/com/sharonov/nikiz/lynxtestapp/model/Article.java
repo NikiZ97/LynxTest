@@ -21,7 +21,7 @@ public class Article implements Parcelable {
     @SerializedName("article")
     private List<ArcticleItem> articleItems;
 
-    protected Article(Parcel in) {
+    private Article(Parcel in) {
         team1 = in.readString();
         team2 = in.readString();
         tournament = in.readString();
